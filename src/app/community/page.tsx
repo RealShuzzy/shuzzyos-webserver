@@ -1,9 +1,9 @@
-export default function Home() {
+export default function News() {
   return (
     <div className="flex flex-col min-h-[4000px] bg-nosferatu-900 text-light">
 
-      <div className="w-full h-[300px] bg-dracula m-15">
-        <p>Home</p>
+      <div className="w-full h-[300px] bg-dracula-950">
+        <p>CommunityS</p>
       </div>
 
     </div>

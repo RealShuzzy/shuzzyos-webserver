@@ -2,7 +2,7 @@ export default function Downloads() {
   return (
     <div className="flex flex-col min-h-[4000px] bg-nosferatu-900 text-light">
 
-      <div className="w-full h-[300px] bg-dracula">
+      <div className="w-full h-[300px] bg-dracula-300">
         <p>Downloads</p>
       </div>
 

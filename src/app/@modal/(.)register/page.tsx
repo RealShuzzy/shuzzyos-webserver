@@ -22,7 +22,7 @@ export default function Register() {
   }, [router])
 
   return (
-    <div className="fixed inset-0 backdrop-blur-[30px] flex items-center justify-center">
+    <div className="fixed inset-0 backdrop-blur-[10px] flex items-center justify-center">
       <div
           ref={popup}
           className="w-[45vh] h-[60vh] min-h-[432px] bg-nosferatu-950 opacity-90 rounded-xl shadow-lg p-[1vh] flex flex-col"
