@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ReactNode } from "react";
 import Navbar from "@/app/(navbar)/navbar";
+import Bottom from "./(bottom)/bottom";
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
           {children}
         </main>
         {modal}
+        <Bottom/>
       </body>
     </html>
   );
