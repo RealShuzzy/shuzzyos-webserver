@@ -3,6 +3,7 @@
 :root {
   --background: var(--color-nosferatu);
   --foreground: var(--color-light);
+  --font-body: var(--font-fira-code);
 }
 
 @theme inline {
@@ -22,7 +23,29 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), monospace;
+}
+
+h1 {
+  @apply text-4xl font-bold my-4;
+}
+
+h2 {
+  @apply text-3xl font-semibold my-3;
+}
+
+h3 {
+  @apply text-2xl font-medium my-2;
+}
+
+pre {
+  @apply bg-nosferatu text-white text-sm p-4 rounded overflow-x-auto my-4;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+code {
+  @apply bg-nosferatu text-blue px-1 py-0.5 rounded;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 @theme {

@@ -1,32 +1,30 @@
 interface GitHubFieldOptions {
     title: string;
     text: string;
-    image: string;
-    alt?: string;
+    image: {
+        src: string;
+        alt?: string;
+    };
+    link?: string;
 }
 
 export default function GitHubField(opts: GitHubFieldOptions) {
 
-    const { title, text, image, alt } = opts;
+    const { title, text, image, link } = opts;
 
     return (
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 flex-col hover:scale-95">
+        <a href={link} target="_blank" className="bg-nosferatu-800 rounded-2xl flex p-10 flex-col hover:scale-95">
+            <div className="h-full flex gap-5 flex-col">
 
-            <div className="h-full">
-
-                <div className="h-[25%]">
-                    <h2 className="text-dracula font-semibold text-3xl">{title}</h2>
-                    <br />
+                <div className="h-[25%] flex flex-row items-center gap-5">
+                    <img src={image.src} alt={image.alt} className="h-full"/>
+                    <h2 className="text-dracula font-semibold text-xl">{title}</h2>
                 </div>
                 
-                <div className="flex h-[75%]">
-                    <p className="text-lg w-[55%]">{text}</p>
-                    <div className="w-[45%] flex items-center">
-                        <img src={image} alt={alt}/>
-                    </div>
-                </div>
+                <p className="text-lg text-justify">{text}</p>
             </div>          
-        </div>
+        </a>
+        
     )
 }
 

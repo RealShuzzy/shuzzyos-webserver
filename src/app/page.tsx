@@ -1,4 +1,6 @@
+import AboutField from "@/components/ui/AboutField"
 import GitHubField from "@/components/ui/GitHubField"
+import ShuzzyOSBanner from "@/components/ui/ShuzzyOSBanner"
 import Link from "next/link"
 
 export default function Home() {
@@ -10,58 +12,59 @@ export default function Home() {
           <img src="shuzzyos_banner.png" alt="ShuzzyOS logo (vampire teeth)" className="w-full h-full object-cover items-center justify-center rounded-2xl" />
         </div>
         
-        <div className="col-span-2 flex flex-col justify-center items-center bg-nosferatu-800 rounded-2xl">
-          <div className="grid grid-cols-3 w-full h-full">
-            <div className="flex justify-center items-center">
-              <img src="dev.png" alt=""/>
-            </div>
-           
-            <div className="flex flex-col justify-center items-center">
-              <h1 className="text-7xl font-semibold p-3">ShuzzyOS</h1>
-              <p className="text-blue text-xl">// The perfect linux distro for developers and gamers</p>
+        <ShuzzyOSBanner download={true} />
 
-              <Link href="/download" className="bg-dracula p-5 rounded-2xl mt-4">Download</Link>
-            </div>
+        <AboutField
+          title="What is ShuzzyOS?"
+          text="ShuzzyOS is a Linux distrobution based on Arch Linux.
+              It comes with a fully customized Hyprland desktop environment and an easy to use visual installer.
+              Not sure? Try ShuzzyOS in its Live-ISO without installing it!"
+          image={{ src:"arch.png", alt:"Arch Linux logo"}}
+        />
 
-            <div className="flex justify-center items-center">
-              <img src="gamer.png" alt=""/>
-            </div>
-          </div>
-        </div>
-        
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 min-w-[500px]">
-          <div className="max-w-2/3">
-            <h2 className="text-dracula font-semibold text-3xl">What is ShuzzyOS?</h2>
-            <br/>
-            <p className="text-lg">ShuzzyOS simply takes a fresh Archlinux
-              install and adds a fully customized desktop environment.
-              In short: ShuzzyOS is Archlinux + Hyprland.
-            </p>
-          </div>
-          <div className="flex-grow"/>
-          <img src="arch.png" alt="Archlinux A-logo"/>
-        </div>
-
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 min-w-[500px]">
-          <div>
-            <h2 className="text-dracula font-semibold text-3xl">Dracula Theme</h2>
-            <br />
-            <p className="text-lg">Everything is themed with the Dracula-Theme
-              colorpallet.
-            </p>
-          </div>
-          <div className="flex-grow"/>
-          <img src="dracula.png" alt="Dracula-Theme Icon (Dracula)"/>
-        </div>
+        <AboutField
+          title="Dracula Theme"
+          text="ShuzzyOS uses the Dracula theme because of its awesome color palette that looks great and supports almost every app out there.
+              It’s the perfect dark theme for developers and gamers who want a stylish, consistent look that is easy on the eyes."
+          image={{ src:"dracula.png", alt:"Dracula-Theme Dracula logo"}}
+        />
 
         <div className="col-span-2 h-[30vh] bg-nosferatu grid gap-5 grid-cols-5 grid-rows-1">
 
-          <GitHubField title="Read me" text="To get an overview over ShuzzyOS. This will teach you how to install and use this linux distro." image="github.png" alt="Star"/>
-          <GitHubField title="Documentation" text="Having any problems, or just want to customize ShuzzyOS? Check the documentation in the GitHub Wiki" image="github.png" alt="Star"/>
-          <GitHubField title="GitHub" text="To view the source code, view the GitHub page of ShuzzyOS." image="github.png" alt="Star"/>
-          <GitHubField title="Credits" text="Thanks to all the developers of used dependencies" image="github.png" alt="Star"/>
-          <GitHubField title="Contribute" text="You have an improvement and whant to ShuzzyOS to get better? Feel free to contribute, or just share your ideas." image="github.png" alt="Star"/>
-          
+          <GitHubField 
+            title="Read Me" 
+            text="Get an overview of ShuzzyOS. Learn how to install and use this Linux distro." 
+            image={{ src:"book-open-text.png", alt:"Open book with text" }}
+            link="https://github.com/RealShuzzy/ShuzzyOS/blob/main/README.md"
+          />
+
+          <GitHubField 
+            title="Wiki" 
+            text="Having problems or want to customize ShuzzyOS? Check the GitHub Wiki for detailed documentation." 
+            image={{ src:"notebook-pen.png", alt:"Notebook with pen" }}
+            link="https://github.com/RealShuzzy/ShuzzyOS/wiki"
+          />
+
+          <GitHubField 
+            title="GitHub" 
+            text="View the source code on the official ShuzzyOS GitHub repository." 
+            image={{ src:"github.png", alt:"GitHub logo" }}
+            link="https://github.com/RealShuzzy/ShuzzyOS"
+          />
+
+          <GitHubField 
+            title="Credits" 
+            text="Thanks to all the developers and open source projects that made ShuzzyOS possible." 
+            image={{ src:"creative-commons.png", alt:"Creative Commons logo" }}
+            link="https://github.com/RealShuzzy/ShuzzyOS/blob/main/CREDITS.md"
+          />
+
+          <GitHubField 
+            title="Contribute" 
+            text="Have ideas or improvements for ShuzzyOS? Feel free to contribute or share your suggestions." 
+            image={{ src:"git-pull-request-create-arrow.png" , alt:"GitHub pull request icon" }}
+            link="https://github.com/RealShuzzy/ShuzzyOS/pulls"
+          />
         </div>
         
       </div>
