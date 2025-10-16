@@ -1,3 +1,4 @@
+import GitHubField from "@/components/ui/GitHubField"
 import Link from "next/link"
 
 export default function Home() {
@@ -53,76 +54,16 @@ export default function Home() {
           <img src="dracula.png" alt="Dracula-Theme Icon (Dracula)"/>
         </div>
 
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 col-span-2">
-          <div>
-            <h2 className="text-dracula font-semibold text-3xl">Install ShuzzyOS Delete this holyyy</h2>
-            <br />
-            <p className="text-lg">Either install via the iso, or upgrade your Archlinux with the automated install script:
-            </p>
-            <p className="bg-nosferatu-900 p-3 rounded-xl text-blue">bash &lt;(curl -sL https://raw.githubusercontent.com/RealShuzzy/ShuzzyOS/install.sh)</p>
-            
-          </div>
-          <img src="download.png" alt="Archlinux A-logo"/>
-        </div>
-        
-      </div>
+        <div className="col-span-2 h-[30vh] bg-nosferatu grid gap-5 grid-cols-5 grid-rows-1">
 
-      <div className="h-[30vh] bg-nosferatu grid m-5 gap-5 grid-cols-5 grid-rows-1">
-
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5">
-          <div>
-            <h2 className="text-dracula font-semibold text-3xl">Read me</h2>
-            <br />
-            <p className="text-lg">Everything is themed with the Dracula-Theme
-              colorpallet.
-            </p>
-          </div>
-          <div className="flex-grow"/>
-          <img src="dracula.png" alt="Dracula-Theme Icon (Dracula)"/>
-        </div>
-
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5">
-          <div>
-            <h2 className="text-dracula font-semibold text-3xl">Documentation</h2>
-            <br />
-            <p className="text-lg">Everything is themed with the Dracula-Theme
-              colorpallet.
-            </p>
-          </div>
-          <div className="flex-grow"/>
-          <img src="dracula.png" alt="Dracula-Theme Icon (Dracula)"/>
-        </div>
-        
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 justify-center">
-          <img src="github.png" alt="Dracula-Theme Icon (Dracula)"/>
-        </div>
-
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5">
-          <div>
-            <h2 className="text-dracula font-semibold text-3xl">Contribute</h2>
-            <br />
-            <p className="text-lg">Everything is themed with the Dracula-Theme
-              colorpallet.
-            </p>
-          </div>
-          <div className="flex-grow"/>
-          <img src="dracula.png" alt="Dracula-Theme Icon (Dracula)"/>
-        </div>
-
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 flex-col">
-          <div>
-            <h2 className="text-dracula font-semibold text-3xl">Credits</h2>
-            <br />
-          </div>
-          
-          <div className="flex">
-            <p className="text-lg">Everything is themed with the Dracula-Theme colorpallet.
-            </p>
-            <div className="flex-grow"/>
-            <img src="dracula.png" alt="Dracula-Theme Icon (Dracula)"/>
-          </div>
+          <GitHubField title="Read me" text="To get an overview over ShuzzyOS. This will teach you how to install and use this linux distro." image="github.png" alt="Star"/>
+          <GitHubField title="Documentation" text="Having any problems, or just want to customize ShuzzyOS? Check the documentation in the GitHub Wiki" image="github.png" alt="Star"/>
+          <GitHubField title="GitHub" text="To view the source code, view the GitHub page of ShuzzyOS." image="github.png" alt="Star"/>
+          <GitHubField title="Credits" text="Thanks to all the developers of used dependencies" image="github.png" alt="Star"/>
+          <GitHubField title="Contribute" text="You have an improvement and whant to ShuzzyOS to get better? Feel free to contribute, or just share your ideas." image="github.png" alt="Star"/>
           
         </div>
+        
       </div>
 
     </div>

@@ -19,18 +19,18 @@ export default function Navbar() {
 
       <div className="flex flex-row gap-4 h-full">
 
-        <Link href={"/"} className={`hover:text-dracula hover:bg-nosferatu-900 w-full h-full p-2 rounded-xl ${ pathname === "/" ? "text-dracula" : ""}`}>Home</Link>
-        <Link href={"/news"} className={`hover:text-dracula hover:bg-nosferatu-900 w-full h-full p-2 rounded-xl ${ pathname === "/news" ? "text-dracula" : ""}`}>News</Link>
-        <Link href={"/preview"} className={`hover:text-dracula hover:bg-nosferatu-900 w-full h-full p-2 rounded-xl ${ pathname === "/preview" ? "text-dracula" : ""}`}>Preview</Link>
-        <Link href={"/download"} className={`hover:text-dracula hover:bg-nosferatu-900 w-full h-full p-2 rounded-xl ${ pathname === "/download" ? "text-dracula" : ""}`}>Download</Link>
+        <Link href={"/"} className={`hover:text-dracula hover:bg-nosferatu-900 active:scale-90 w-full h-full p-2 rounded-xl ${ pathname === "/" ? "text-dracula" : ""}`}>Home</Link>
+        <Link href={"/news"} className={`hover:text-dracula hover:bg-nosferatu-900 active:scale-90 w-full h-full p-2 rounded-xl ${ pathname === "/news" ? "text-dracula" : ""}`}>News</Link>
+        <Link href={"/preview"} className={`hover:text-dracula hover:bg-nosferatu-900 active:scale-90 w-full h-full p-2 rounded-xl ${ pathname === "/preview" ? "text-dracula" : ""}`}>Preview</Link>
+        <Link href={"/download"} className={`hover:text-dracula hover:bg-nosferatu-900 active:scale-90 w-full h-full p-2 rounded-xl ${ pathname === "/download" ? "text-dracula" : ""}`}>Download</Link>
 
         <a href="https://github.com/RealShuzzy/ShuzzyOS" target="_blank">
-          <button className="hover:text-dracula hover:bg-nosferatu-900 w-full h-full p-2 rounded-xl">
+          <div className="hover:text-dracula hover:bg-nosferatu-900 active:scale-90 w-full h-full p-2 rounded-xl">
             GitHub
-          </button>
+          </div>
         </a>
 
-        <Link href={"/community"} className={`hover:text-dracula hover:bg-nosferatu-900 w-full h-full p-2 rounded-xl ${ pathname === "/community" ? "text-dracula" : ""}`}>Community</Link>
+        <Link href={"/community"} className={`hover:text-dracula hover:bg-nosferatu-900 active:scale-90 w-full h-full p-2 rounded-xl ${ pathname === "/community" ? "text-dracula" : ""}`}>Community</Link>
 
       </div>
 
@@ -38,7 +38,7 @@ export default function Navbar() {
 
       <div className="flex flex-row h-full items-center max-w-[20vw] gap-4 flex-grow">
         <div className="flex-grow"/>
-        <Link href={"/login"} className={`flex justify-center bg-nosferatu-900 h-full p-2 rounded-xl w-20 border-dracula border-2 active:bg-dracula ${ pathname === "/login" ? "text-dracula" : ""}`}>Login</Link>
+        <Link href={"/login"} className={`flex justify-center bg-nosferatu-900 active:scale-90 h-full p-2 rounded-xl w-20 border-dracula border-2 active:bg-dracula ${ pathname === "/login" ? "text-dracula" : ""}`}>Login</Link>
       </div>
 
     </nav>
