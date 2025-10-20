@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en" className={firaCodeNerd.className}>
       <body className="volumecontrol-initialized">
         <Navbar/>
-        <main className="pt-15 pb-5">
+        <main className="pt-[4rem]">
           {children}
         </main>
         {modal}

@@ -5,12 +5,11 @@ import ShuzzyOSBanner from "@/components/ui/ShuzzyOSBanner";
 export default function Downloads() {
 
   return (
-    <div className="flex flex-col h-full bg-nosferatu-900 text-light">
+    <div className="h-[75rem] grid grid-cols-1 grid-rows-4 gap-[1rem] p-[1rem]">
 
-      <div className="h-[120vh] bg-nosferatu grid m-5 gap-5 grid-cols-2 grid-rows-6">
+      <ShuzzyOSBanner download={false}/>
 
-        <ShuzzyOSBanner download={false}/>
-
+      <div className="grid grid-rows-1 grid-cols-2 gap-[1rem]">
         <DownloadField
           title="Download the monthly ISO"
           text="bla"
@@ -22,17 +21,16 @@ export default function Downloads() {
           text="bla"
           image={{ src:"hammer.png", alt:"Hammer Icon" }}
         />
-
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 min-w-[500px] col-span-2 row-span-3">
-          <div className="max-w-full">
-            <h2 className="text-dracula font-semibold text-3xl">Installation</h2>
-            <br/>
-            <Markdown link="https://raw.githubusercontent.com/RealShuzzy/ShuzzyOS/refs/heads/main/README.md" section="Install" subsection="Manual"/>
-          </div>
-        </div>
-        
-
       </div>
+
+      <div className="bg-nosferatu-800 rounded-2xl flex p-5 min-w-[500px] col-span-1 row-span-2">
+        <div className="max-w-full">
+          <h2 className="text-dracula font-semibold text-3xl">Installation</h2>
+          <br/>
+          <Markdown link="https://raw.githubusercontent.com/RealShuzzy/ShuzzyOS/refs/heads/main/README.md" section="Install" subsection="Manual"/>
+        </div>
+      </div>
+      
     </div>
   )
 }

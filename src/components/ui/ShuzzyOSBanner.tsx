@@ -6,7 +6,7 @@ interface ShuzzyOSBannerOptions {
 
 export default function ShuzzyOSBanner({ download = true }: ShuzzyOSBannerOptions) {
     return (
-        <div className="col-span-2 flex flex-col justify-center items-center bg-nosferatu-800 rounded-2xl">
+        <div className="flex flex-col justify-center items-center bg-nosferatu-800 rounded-2xl">
             <div className="grid grid-cols-5 w-full h-full">
             <div className="flex justify-center items-center">
                 <img src="dev.png" alt=""/>

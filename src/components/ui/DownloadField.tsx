@@ -13,7 +13,7 @@ export default function DownloadField(opts: DownloadFieldOptions) {
     const { title, text, image, link } = opts;
 
     return (
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 flex-col row-span-2">
+        <div className="bg-nosferatu-800 rounded-2xl flex p-5 flex-col">
             <div className="h-full">
 
                 <div className="h-[15%]">

@@ -12,17 +12,15 @@ export default function AboutField(opts: AboutFieldOptions) {
     const { title, text, image } = opts;
 
     return (
-        <div className="bg-nosferatu-800 rounded-2xl flex p-10 min-w-[500px]">
+        <div className="bg-nosferatu-800 rounded-2xl grid grid-rows-[5rem_1fr] grid-cols-[5rem_1fr] lg:grid-cols-[1fr_35%] p-[2rem]">
 
-          <div className="max-w-2/3">
+          <img src={image.src} alt={image.alt} className="bg-blue lg:h-[13.5rem] lg:row-span-2 lg:col-span-1 lg:order-2"/>
 
-            <h2 className="text-dracula font-semibold text-3xl">{title}</h2>
-            <p className="text-lg text-justify">{text}</p>
+          <div className="bg-red lg:order-1 lg:col-span-1 lg:row-span-1">{title}</div>
 
-          </div>
+          <div className="bg-green col-span-2 lg:col-span-1 lg:order-3 lg:row-span-1">{text}</div>
 
-          <div className="flex-grow"/>
-          <img src={image.src} alt={image.alt}/>
+          
         </div>
         
     )
