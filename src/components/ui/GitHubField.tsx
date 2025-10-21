@@ -21,7 +21,7 @@ export default function GitHubField(opts: GitHubFieldOptions) {
                     <h2 className="text-dracula font-semibold text-xl">{title}</h2>
                 </div>
                 
-                <p className="text-lg text-justify">{text}</p>
+                <p className="lg:text-sm xl:text-[1rem] text-justify overflow-scroll">{text}</p>
             </div>          
         </a>
         

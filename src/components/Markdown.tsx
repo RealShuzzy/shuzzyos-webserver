@@ -74,7 +74,7 @@ export default async function Markdown(opts: MarkdownOptions) {
 
   return (
     <div
-      className="prose prose-invert max-w-none"
+      className="prose prose-invert max-w-none border-2 border-blue rounded-2xl p-[1rem]"
       dangerouslySetInnerHTML={{ __html: htmlMarkdown }}
     />
   );

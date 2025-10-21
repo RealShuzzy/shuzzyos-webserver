@@ -14,6 +14,7 @@ export default function Downloads() {
           title="Download the monthly ISO"
           text="bla"
           image={{ src:"download.png", alt:"Download Icon" }}
+          list={true}
         />
 
         <DownloadField

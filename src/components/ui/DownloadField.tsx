@@ -1,3 +1,6 @@
+'use client'
+import DownloadOptions from "./DownloadOptions";
+
 interface DownloadFieldOptions {
     title: string;
     text: string;
@@ -6,11 +9,12 @@ interface DownloadFieldOptions {
         alt?: string;
     };
     link?: string;
+    list?: boolean;
 }
 
 export default function DownloadField(opts: DownloadFieldOptions) {
 
-    const { title, text, image, link } = opts;
+    const { title, text, image, link, list } = opts;
 
     return (
         <div className="bg-nosferatu-800 rounded-2xl flex p-5 flex-col">
@@ -21,12 +25,18 @@ export default function DownloadField(opts: DownloadFieldOptions) {
                     <br />
                 </div>
                 
-                <div className="flex h-[85%]">
+                <div className="flex flex-col h-[85%]">
                     <p className="text-lg w-[75%]">{text}</p>
+                    
+                    {list && <DownloadOptions/>}
+
+                    
                     <div className="w-[25%] flex items-center pl-5">
                         <img src={image.src} alt={image.alt}/>
                     </div>
                 </div>
+
+                
 
             </div>          
         </div>

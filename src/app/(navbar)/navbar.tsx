@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="flex flex-row h-full items-center max-w-[20vw] flex-grow">
         <Link href="/" className="flex flex-row items-center h-full hover:bg-nosferatu-900 rounded-xl gap-[1rem] active:scale-90 hover:text-dracula">
           <img src="shuzzyos.png" alt="Logo with vampire teeth" className="h-full"/>
-          <p className="font-semibold text-xl">ShuzzyOS</p>
+          <p className="font-semibold text-xl pr-[1rem]">ShuzzyOS</p>
         </Link>
         <div className="flex-grow"/>
       </div>

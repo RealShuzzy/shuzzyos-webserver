@@ -4,7 +4,7 @@ import ShuzzyOSBanner from "@/components/ui/ShuzzyOSBanner"
 
 export default function Home() {
   return (
-    <div className="h-[175rem] lg:h-[75rem] grid grid-cols-1 lg:grid-rows-4 grid-rows-9 gap-[1rem] p-[1rem]">
+    <div className="h-[160rem] lg:h-[65rem] grid grid-cols-1 lg:grid-rows-4 grid-rows-9 gap-[1rem] p-[1rem]">
 
         <img src="shuzzyos_banner.png" alt="ShuzzyOS logo (vampire teeth)" className="w-full h-full object-cover items-center justify-center rounded-2xl" />
 
