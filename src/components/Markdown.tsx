@@ -70,12 +70,19 @@ export default async function Markdown(opts: MarkdownOptions) {
     .use(html)
     .process(markdownToRender);
 
-  const htmlMarkdown = processedMarkdown.toString();
+  let htmlMarkdown = processedMarkdown.toString();
+  //remove last <hr/> or a section
+  htmlMarkdown = htmlMarkdown.replace(/(<hr\s*\/?>)(?![\s\S]*<hr\s*\/?>)/i, "");
 
   return (
-    <div
-      className="prose prose-invert max-w-none border-2 border-blue rounded-2xl p-[1rem]"
-      dangerouslySetInnerHTML={{ __html: htmlMarkdown }}
-    />
+    <>
+      <h2 className="relative translate-[1.75rem] px-[0.5rem] bg-nosferatu-800 w-fit">{section}</h2>
+      <div
+        id="markdown"
+        className="prose prose-invert max-w-none border-2 border-blue rounded-2xl p-[1rem] pt-[1.5rem] mt-[0.75rem] overflow-scroll"
+        dangerouslySetInnerHTML={{ __html: htmlMarkdown }}
+      />
+    </>
+    
   );
 }

@@ -7,7 +7,7 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <nav className="bg-nosferatu-950 flex flex-row w-full h-[4rem] items-center p-[0.5rem] fixed">
+    <nav className="bg-nosferatu-950 flex flex-row w-full h-[4rem] items-center p-[0.5rem] fixed z-50">
 
       <div className="flex flex-row h-full items-center max-w-[20vw] flex-grow">
         <Link href="/" className="flex flex-row items-center h-full hover:bg-nosferatu-900 rounded-xl gap-[1rem] active:scale-90 hover:text-dracula">

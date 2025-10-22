@@ -27,26 +27,48 @@ body {
   font-family: var(--font-body), monospace;
 }
 
+hr {
+  @apply my-[1.5rem] border-1 text-blue;
+}
+
+blockquote {
+  @apply text-blue bg-nosferatu-900 w-fit p-[0.25rem] mb-[1rem] rounded;
+}
+
+#markdown a {
+  @apply text-cyan-600 underline hover:text-dracula;
+}
+
 h1 {
   @apply text-5xl font-bold;
 }
 
 h2 {
-  @apply text-xl font-semibold;
+  @apply text-xl font-bold;
 }
 
 h3 {
-  @apply text-lg font-medium;
+  @apply text-xl font-bold text-dracula p-[0.5rem] pl-0 pt-0;
+}
+
+h4 {
+  @apply text-lg font-semibold p-[0.5rem] pl-0;
+}
+
+p {
+  @apply text-[1rem];
 }
 
 pre {
-  @apply bg-nosferatu text-white text-sm p-4 rounded overflow-x-auto my-4;
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  @apply bg-nosferatu text-white text-sm p-[1rem] rounded overflow-x-auto my-4;
 }
 
 code {
-  @apply bg-nosferatu text-blue px-1 py-0.5 rounded;
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  @apply bg-nosferatu text-blue py-[0.05rem] px-[0.5rem] rounded;
+}
+
+ul {
+  @apply list-disc ml-[2rem];
 }
 
 @theme {
