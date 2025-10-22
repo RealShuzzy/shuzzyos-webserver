@@ -12,15 +12,15 @@ export default function Downloads() {
       <div className="grid grid-rows-1 grid-cols-2 gap-[1rem]">
         <DownloadField
           title="Download the monthly ISO"
-          text="bla"
           image={{ src:"download.png", alt:"Download Icon" }}
           list={true}
+          markdown={{ link:"https://raw.githubusercontent.com/RealShuzzy/ShuzzyOS/refs/heads/main/README.md", section:"Install" }}
         />
 
         <DownloadField
           title="Build your own ISO"
-          text="bla"
           image={{ src:"hammer.png", alt:"Hammer Icon" }}
+          markdown={{ link:"https://raw.githubusercontent.com/RealShuzzy/ShuzzyOS/refs/heads/main/README.md", section:"💿 Getting the ISO" }}
         />
       </div>
 
@@ -28,7 +28,7 @@ export default function Downloads() {
         <div className="max-w-full">
           <h2 className="text-dracula font-semibold text-3xl">Installation</h2>
           <br/>
-          <Markdown link="https://raw.githubusercontent.com/RealShuzzy/ShuzzyOS/refs/heads/main/README.md" section="Install" subsection="Manual"/>
+          <Markdown link="https://raw.githubusercontent.com/RealShuzzy/ShuzzyOS/refs/heads/main/README.md" section="💿 Getting the ISO"/>
         </div>
       </div>
       

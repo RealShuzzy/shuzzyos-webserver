@@ -1,44 +1,38 @@
 'use client'
+import Markdown from "../Markdown";
 import DownloadOptions from "./DownloadOptions";
 
 interface DownloadFieldOptions {
     title: string;
-    text: string;
     image: {
         src: string;
         alt?: string;
     };
-    link?: string;
+    markdown: {
+        link: string;
+        section: string;
+        subsection?: string;
+    }
     list?: boolean;
 }
 
 export default function DownloadField(opts: DownloadFieldOptions) {
 
-    const { title, text, image, link, list } = opts;
+    const { title, image, markdown, list } = opts;
 
     return (
-        <div className="bg-nosferatu-800 rounded-2xl flex p-5 flex-col">
-            <div className="h-full">
+        <div className="bg-nosferatu-800 rounded-2xl grid grid-rows-[3rem_1fr] grid-cols-[3rem_1fr] lg:grid-cols-[1fr_13rem] p-[2rem]">
 
-                <div className="h-[15%]">
-                    <h2 className="text-dracula font-semibold text-3xl">{title}</h2>
-                    <br />
-                </div>
-                
-                <div className="flex flex-col h-[85%]">
-                    <p className="text-lg w-[75%]">{text}</p>
-                    
-                    {list && <DownloadOptions/>}
+          <img src={image.src} alt={image.alt} className="h-[3rem] lg:h-[11rem] lg:row-span-2 lg:col-span-1 lg:order-2 lg:pl-[2rem]"/>
 
-                    
-                    <div className="w-[25%] flex items-center pl-5">
-                        <img src={image.src} alt={image.alt}/>
-                    </div>
-                </div>
+          <h2 className="lg:order-1 lg:col-span-1 lg:row-span-1 text-dracula font-semibold flex items-center pl-[1rem] lg:pl-0">{title}</h2>
 
-                
+          <div className="col-span-2 lg:col-span-1 lg:order-3 lg:row-span-1 overflow-scroll pt-[1rem] lg:pt-0 xl:text-[1rem]">
 
-            </div>          
+            <Markdown link={markdown.link} section={markdown.section} subsection={markdown.subsection}/>
+
+          </div>
+
         </div>
         
     )
