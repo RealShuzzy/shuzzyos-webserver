@@ -7,6 +7,7 @@ export default function Home() {
     <div className="h-[160rem] lg:h-[65rem] grid grid-cols-1 lg:grid-rows-4 grid-rows-9 gap-[1rem] p-[1rem]">
 
       <div className="w-full h-full bg-dracula">
+         <img src="shuzzyos_banner.png" alt="ShuzzyOS logo (vampire teeth)" className="w-full h-full object-cover items-center justify-center rounded-2xl" />
         <p>Home</p>
       </div>
 
