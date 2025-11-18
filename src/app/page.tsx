@@ -22,7 +22,7 @@ export default function Home() {
           />
 
           <AboutField
-            title="Dracula Theme test"
+            title="Dracula Theme"
             text="ShuzzyOS uses the Dracula theme because of its awesome color palette that looks great and supports almost every app out there.
                 It’s the perfect dark theme for developers and gamers who want a stylish, consistent look that is easy on the eyes."
             image={{ src:"dracula.png", alt:"Dracula-Theme Dracula logo"}}
