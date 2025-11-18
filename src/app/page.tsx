@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div className="h-[160rem] lg:h-[65rem] grid grid-cols-1 lg:grid-rows-4 grid-rows-9 gap-[1rem] p-[1rem]">
 
-        <img src="shuzzyos_banner.png" alt="ShuzzyOS logo (vampire teeth)" className="w-full h-full object-cover items-center justify-center rounded-2xl" />
+      <div className="w-full h-full bg-dracula">
+        <p>Home</p>
+      </div>
 
         <ShuzzyOSBanner download={true} />
 
@@ -20,7 +22,7 @@ export default function Home() {
           />
 
           <AboutField
-            title="Dracula Theme"
+            title="Dracula Theme test"
             text="ShuzzyOS uses the Dracula theme because of its awesome color palette that looks great and supports almost every app out there.
                 It’s the perfect dark theme for developers and gamers who want a stylish, consistent look that is easy on the eyes."
             image={{ src:"dracula.png", alt:"Dracula-Theme Dracula logo"}}
