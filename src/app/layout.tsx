@@ -29,9 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={firaCodeNerd.className}>
-      <header>
+      <head>
         <title>Shuzzy</title>
-      </header>
+      </head>
       <body className="volumecontrol-initialized">
         <Navbar/>
         <main className="pt-[4rem]">
