@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={firaCodeNerd.className}>
       <head>
-        <title>Shuzzy</title>
+        <title>ShuzzyOS</title>
       </head>
       <body className="volumecontrol-initialized">
         <Navbar/>
